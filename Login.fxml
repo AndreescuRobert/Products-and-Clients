@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="curs8.LoginController">
+   <children>
+      <TabPane layoutX="19.0" layoutY="15.0" prefHeight="478.0" prefWidth="722.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tab_Login" text="Login">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="buton_Login" layoutX="251.0" layoutY="224.0" mnemonicParsing="false" onAction="#Login" prefHeight="47.0" prefWidth="202.0" text="Login" />
+                        <TextField fx:id="txt_usernameLogin" layoutX="278.0" layoutY="92.0" promptText="Username" />
+                        <Label layoutX="209.0" layoutY="96.0" text="Usrname:" />
+                        <Label layoutX="216.0" layoutY="144.0" text="Parola:" />
+                        <ComboBox fx:id="atribut_tipLogin" layoutX="519.0" layoutY="92.0" prefWidth="150.0" promptText="Alege tipul" />
+                        <PasswordField fx:id="txt_passwordLogin" layoutX="278.0" layoutY="140.0" promptText="Parola" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tab_Register" text="Register">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="buton_Register" layoutX="235.0" layoutY="217.0" mnemonicParsing="false" onAction="#adaugaUtilizator" prefHeight="52.0" prefWidth="251.0" text="Register" />
+                        <ComboBox fx:id="atribut_tipRegister" layoutX="521.0" layoutY="83.0" prefWidth="150.0" promptText="Alege tipul" />
+                        <TextField fx:id="txt_username_Register" layoutX="287.0" layoutY="83.0" promptText="Username" />
+                        <PasswordField fx:id="txt_passwordRegister" layoutX="287.0" layoutY="145.0" promptText="Parola" />
+                        <Label layoutX="221.0" layoutY="87.0" text="Usrname:" />
+                        <Label layoutX="228.0" layoutY="149.0" text="Parola:" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

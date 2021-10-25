@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="581.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="curs8.Curs8Controller">
+   <children>
+      <TabPane layoutX="15.0" layoutY="14.0" prefHeight="553.0" prefWidth="800.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tab_Produse" text="Produse">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="46.0" text="Datele din tabela produse" />
+                        <Button fx:id="buton_IncarcareProduse" layoutX="670.0" layoutY="42.0" mnemonicParsing="false" onAction="#incarcaProduse" prefHeight="26.0" prefWidth="120.0" text="Vizualizare produse" />
+                        <TableView fx:id="tabela_Produse" layoutX="14.0" layoutY="75.0" onMouseClicked="#getSelectedProduse" prefHeight="436.0" prefWidth="510.0">
+                          <columns>
+                            <TableColumn fx:id="atribut_idprodus" prefWidth="99.99999618530273" text="idprodus" />
+                            <TableColumn fx:id="atribut_Denumire" prefWidth="201.59996032714844" text="Denumire" />
+                              <TableColumn fx:id="atribut_Cantitate" prefWidth="208.800048828125" text="Cantitate" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="buton_adaugareProduse" layoutX="557.0" layoutY="42.0" mnemonicParsing="false" onAction="#adaugareProduse" text="Adauga Produs" />
+                        <Button fx:id="buton_stergereProduse" layoutX="444.0" layoutY="42.0" mnemonicParsing="false" onAction="#stergeProdus" text="Sterge Produs" />
+                        <Label layoutX="555.0" layoutY="159.0" text="Denumire:" />
+                        <Label layoutX="557.0" layoutY="220.0" text="Cantitate:" />
+                        <TextField fx:id="txt_denumire" layoutX="557.0" layoutY="186.0" promptText="Denumire" />
+                        <TextField fx:id="txt_cantitate" layoutX="557.0" layoutY="249.0" promptText="Cantitate" />
+                        <Button fx:id="buton_modificareProduse" layoutX="322.0" layoutY="42.0" mnemonicParsing="false" onAction="#modificaProdus" text="Modifica Produs" />
+                        <TextField fx:id="txt_idProdus" layoutX="555.0" layoutY="122.0" promptText="ID" />
+                        <Label layoutX="555.0" layoutY="98.0" text="ID" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tab_Furnizori" text="Furnizori">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="42.0" text="Datele din tabela furnizori" />
+                        <Button fx:id="buton_IncarcareFurnizori" layoutX="659.0" layoutY="37.0" mnemonicParsing="false" onAction="#incarcaFurnizori" prefHeight="26.0" prefWidth="126.0" text="Vizualizare furnizori" />
+                        <TableView fx:id="tabela_Furnizori" layoutX="14.0" layoutY="74.0" onMouseClicked="#getSelectedFurnizori" prefHeight="442.0" prefWidth="494.0">
+                          <columns>
+                            <TableColumn fx:id="atribut_idfurnizor" prefWidth="75.0" text="idfurnizor" />
+                            <TableColumn fx:id="atribut_NumeF" prefWidth="210.40003967285156" text="Nume Furnizor" />
+                              <TableColumn fx:id="atribut_AdresaF" prefWidth="208.0" text="Adresa" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="buton_adaugareFurnizori" layoutX="541.0" layoutY="38.0" mnemonicParsing="false" onAction="#adaugareFurnizori" text="Adauga Furnizor" />
+                        <Button fx:id="buton_stergereFurnizori" layoutX="428.0" layoutY="38.0" mnemonicParsing="false" onAction="#stergeFurnizor" text="Sterge furnizor" />
+                        <TextField fx:id="txt_numeFurnizor" layoutX="550.0" layoutY="172.0" promptText="Nume Furnizor" />
+                        <TextField fx:id="txt_adresaFurnizor" layoutX="550.0" layoutY="237.0" promptText="Adresa" />
+                        <Label layoutX="550.0" layoutY="143.0" text="Numer Furnizor:" />
+                        <Label layoutX="550.0" layoutY="212.0" text="Adresa:" />
+                        <Button fx:id="buton_modificareFurnizori" layoutX="304.0" layoutY="38.0" mnemonicParsing="false" onAction="#modificaFurnizor" text="Modifica Furnizor" />
+                        <Label layoutX="550.0" layoutY="91.0" text="ID" />
+                        <TextField fx:id="txt_idFurnizor" layoutX="550.0" layoutY="109.0" promptText="ID" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tab_Clienti" text="Clienti">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="523.0" prefWidth="804.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="45.0" text="Datele din tabela clienti" />
+                        <Button fx:id="buton_IncarcareClienti" layoutX="682.0" layoutY="40.0" mnemonicParsing="false" onAction="#incarcaClienti" prefHeight="26.0" prefWidth="110.0" text="Vizualizare clienti" />
+                        <TableView fx:id="tabela_Clienti" layoutX="14.0" layoutY="78.0" onMouseClicked="#getSelectedClienti" prefHeight="435.0" prefWidth="490.0">
+                          <columns>
+                            <TableColumn fx:id="atribut_idclient" prefWidth="52.799983978271484" text="idclient" />
+                            <TableColumn fx:id="atribut_NumeC" prefWidth="100.80001831054688" text="Nume" />
+                              <TableColumn fx:id="atribut_Prenume" prefWidth="112.00001525878906" text="Prenume" />
+                              <TableColumn fx:id="atribut_AdresaC" prefWidth="115.20001220703125" text="Adresa" />
+                              <TableColumn fx:id="atribut_Email" prefWidth="107.20001220703125" text="Email" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="buton_adaugareClienti" layoutX="583.0" layoutY="41.0" mnemonicParsing="false" onAction="#adaugareClienti" text="Adauga Client" />
+                        <Button fx:id="buton_stergereClienti" layoutX="488.0" layoutY="41.0" mnemonicParsing="false" onAction="#stergeClient" text="Sterge Client" />
+                        <TextField fx:id="txt_numeClient" layoutX="543.0" layoutY="181.0" promptText="Nume Client" />
+                        <TextField fx:id="txt_prenume" layoutX="543.0" layoutY="242.0" promptText="Prenume" />
+                        <TextField fx:id="txt_adresaClient" layoutX="543.0" layoutY="306.0" promptText="Adresa" />
+                        <Label layoutX="544.0" layoutY="153.0" text="Nume Client:" />
+                        <Label layoutX="547.0" layoutY="215.0" text="Prenume:" />
+                        <Label layoutX="543.0" layoutY="278.0" text="Adresa:" />
+                        <Label layoutX="547.0" layoutY="344.0" text="Email:" />
+                        <TextField fx:id="txt_email" layoutX="543.0" layoutY="373.0" promptText="Email" />
+                        <Button fx:id="buton_modificareClienti" layoutX="377.0" layoutY="41.0" mnemonicParsing="false" onAction="#modificaClient" text="Modifica Client" />
+                        <TextField fx:id="txt_idClient" layoutX="543.0" layoutY="114.0" promptText="ID" />
+                        <Label layoutX="543.0" layoutY="88.0" text="ID" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
